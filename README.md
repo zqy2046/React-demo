@@ -1,5 +1,5 @@
-#React 学习记录
-###起步
+#  React 学习记录
+### 起步
 
 ```javasxript
     npm init    //项目初始化
