@@ -1,6 +1,6 @@
-### arr.reduce(callback[, initialValue])
+## Array.prorotype.reduce(callback[, initialValue])
 
->    2个参数，一个回调函数,一个初始值
+### 2个参数，一个回调函数,一个初始值
 
 -    initialValue
   [可选] 用作第一个调用 callback的第一个参数的值。 如果没有提供初始值，则  将使用数组中的第一个元素。 在没有初始值的空数组上调用 reduce 将报错。
@@ -9,7 +9,7 @@
     执行数组中每个值的函数，包含四个参数：
  
 
-#####   callback（如下所示）。
+###   callback（如下所示）。
  -  accumulator
     累加器累加回调的返回值; 它是上一次调用回调时返回的累积值 
     
@@ -28,3 +28,4 @@
 	  console.dir(arguments);
 	},initialValue)
 ```
+												--摘自 [MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
