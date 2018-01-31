@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    #root {
+      width: 800px;
+      height: auto;
+      margin: 20px auto;
+    }
+    .box {
+      width: 200px;
+      height: 200px;
+      background-color: #ccc;
+    }
+    .cu {
+      font-weight: bolder;
+    }
+    .xie {
+      font-style: italic;
+    }
+    .xia {
+      text-decoration: underline;
+    }
+    .red {
+      color: red;
+    }
+
+    .cart {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      height: auto;
+      border: 1px solid #000;
+    }
+    .cart-header,.goodsItem {
+      display: flex;
+      flex: 1;
+      line-height: 50px;
+      border-bottom: 1px solid #ccc;
+      text-align: center;
+    }
+    .cart-header {
+      font-weight: bold;
+    }
+    .cell {
+      flex: 1;
+      display: inline-block;
+      width: 200px;
+      box-sizing: border-box;
+      height: 50px;
+      border-right: 1px solid #ccc;
+    }
+
+  </style>
+</head>
+<body>
+<div id="root"></div>
+<script src="dist/bundle.js"></script>
+</body>
+</html>
