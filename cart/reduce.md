@@ -22,11 +22,50 @@
  - array
     调用reduce的数组
  
-
+>  示例:
 ``` javascript
-	[1,2,3,4,3,2,22,222,4].reduce(function(prev,next,index,item){
-	  console.dir(arguments);
-	},initialValue)
+//数组求和:
+	var sum = [0, 1, 2, 3].reduce(function (a, b) {
+  		return a + b;
+	}, 0);
+	// sum is 6
+	
+//计算数组中每个元素出现的次数:
+var names = ['Alice', 'Bob', 'Tiff', 'Bruce', 'Alice'];
+
+var countedNames = names.reduce(function (allNames, name) { 
+  if (name in allNames) {
+    allNames[name]++;
+  }
+  else {
+    allNames[name] = 1;
+  }
+  return allNames;
+}, {});
+// countedNames is:
+// { 'Alice': 2, 'Bob': 1, 'Tiff': 1, 'Bruce': 1 }
+
+//二维数组拍平:
+var flattened = [[0, 1], [2, 3], [4, 5]].reduce(
+  function(a, b) {
+    return a.concat(b);
+  },
+  []
+);
+// flattened is [0, 1, 2, 3, 4, 5]
+
+//数组去重:
+let arr = [1,2,1,2,3,5,4,5,3,4,4,4,4];
+let result = arr.sort().reduce((init, current)=>{
+    if(init.length===0 || init[init.length-1]!==current){
+        init.push(current);
+    }
+    return init;
+}, []);
+console.log(result); //[1,2,3,4,5]
 ```
+
+
+
 
 > 摘自 [MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
