@@ -28,18 +28,16 @@ class ShoppingCart extends Component {
     */
     /*方法二: reduce;
      *reduce(arr.reduce(callback[, initialValue]),callback有4个参数;
-     *reduce方法使用注意,第一个参数是每次返回的值(第一次默认是数组第一项,
-     *可在reduce函数的第二个参数指定,第二个参数是当前处理的项,
+     *reduce方法使用注意,callback第一个参数是每次返回的值(第一次迭代默认是数组第一项可在reduce函数的第二个参数指定),第二个参数是当前处理的项
     * */
-    /*错误示范:
+    /*错误写法:
     * var arr = this.state.goods;
     let total = arr.reduce((prev,next,index,arr) => {
       return prev.price * next.amount + next.price * next.amount;
     },0)
-    以上代码错在,迭代的返回值是第一项,是一个数值,
-    * */
+    */
     var arr = this.state.goods;
-    let total = arr.reduce((prev,next,index,arr) => {
+    let total = arr.reduce((prev,next) => {
       return prev + next.price * next.amount;
     },0)
     return total;
@@ -52,6 +50,13 @@ class ShoppingCart extends Component {
           ...item,
           amount,
         }
+      })
+    })
+  }
+  deleteItem(id) {
+    this.setState({
+      goods: this.state.goods.filter(item => {
+        return item.id !== id;
       })
     })
   }
@@ -68,7 +73,10 @@ class ShoppingCart extends Component {
         {
           goods.map((goodsItem, i) => {
             return (
-              <GoodsItem item={goodsItem} setAmount={this.setAmount.bind(this)} key={i}/>
+              <GoodsItem item={goodsItem}
+                         deleteItem={this.deleteItem.bind(this)}
+                         setAmount={this.setAmount.bind(this)}
+                         key={i}/>
             )
           })
         }
