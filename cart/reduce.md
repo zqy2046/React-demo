@@ -28,4 +28,5 @@
 	  console.dir(arguments);
 	},initialValue)
 ```
-												--摘自 [MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
+
+> 摘自 [MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
