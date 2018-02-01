@@ -28,7 +28,8 @@ class ShoppingCart extends Component {
     */
     /*方法二: reduce;
      *reduce(arr.reduce(callback[, initialValue]),callback有4个参数;
-     *reduce方法使用注意,callback第一个参数是每次返回的值(第一次迭代默认是数组第一项可在reduce函数的第二个参数指定),第二个参数是当前处理的项
+     *reduce方法使用注意,第一个参数是每次返回的值(第一次默认是数组第一项,
+     *可在reduce函数的第二个参数指定,第二个参数是当前处理的项,
     * */
     /*错误写法:
     * var arr = this.state.goods;

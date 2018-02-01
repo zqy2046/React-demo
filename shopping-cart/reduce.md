@@ -1,6 +1,6 @@
 ## Array.prorotype.reduce(callback[, initialValue])
 
-###  reduce方法对累加器和数组中的每个元素（从左到右）应用一个函数，将其减少为单个值。
+### 2个参数，一个回调函数,一个初始值
 
 -    initialValue
   [可选] 用作第一个调用 callback的第一个参数的值。 如果没有提供初始值，则  将使用数组中的第一个元素。 在没有初始值的空数组上调用 reduce 将报错。
