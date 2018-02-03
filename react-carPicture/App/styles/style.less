@@ -53,17 +53,23 @@ html,body{
 .ml-15{
   margin-left: 15px;
 }
+
+
+
+#root{
+  width: 100%;
+  height: 100%;
+}
 .wrapperBox{
   position: relative;
-  display:flex;
+  display: flex;
   width: 100%;
   height: 100%;
   background-color: #000;
   .showBigPic{
     position: relative;
-    width: 1060px;
-    height: 100%;
-    background-color: #ff0000;
+    flex: 1;
+    background-color:rgba(0,0,0,.5);
     .prevBtn ,
     .nextBtn{
       position:absolute;
@@ -72,6 +78,17 @@ html,body{
       height: 100%;
       z-index: 999;
       color: #fff;
+    }
+    .big_picBox {
+      width: 80%;
+      height: 80%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+      img{
+        width: 100%;
+      }
     }
     .prevBtn{
       left: 0;
@@ -83,11 +100,10 @@ html,body{
     }
   }
   .rightBox {
-    position: absolute;
-    top:0;
-    right: 0;
+    position: relative;
     width: 290px;
     height: 100%;
+
     background-color: #666;
     color:#eee;
     padding-left:15px;
@@ -191,6 +207,5 @@ html,body{
         }
       }
     }
-
   }
 }
